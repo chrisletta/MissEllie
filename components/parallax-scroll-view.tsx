@@ -11,7 +11,7 @@ import { ThemedView } from '@/components/themed-view';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { useThemeColor } from '@/hooks/use-theme-color';
 
-const HEADER_HEIGHT = 250;
+const HEADER_HEIGHT = 300;
 
 type Props = PropsWithChildren<{
   headerImage: ReactElement;
@@ -21,6 +21,8 @@ type Props = PropsWithChildren<{
 export default function ParallaxScrollView({
   children,
   headerImage,
+  headerHeight=200,
+  headerWidth=400,
   headerBackgroundColor,
 }: Props) {
   const backgroundColor = useThemeColor({}, 'background');
@@ -33,12 +35,12 @@ export default function ParallaxScrollView({
         {
           translateY: interpolate(
             scrollOffset.value,
-            [-HEADER_HEIGHT, 0, HEADER_HEIGHT],
-            [-HEADER_HEIGHT / 2, 0, HEADER_HEIGHT * 0.75]
+            [-headerHeight, 0, headerHeight],
+            [-headerHeight / 2, 0, headerHeight * 0.75]
           ),
         },
         {
-          scale: interpolate(scrollOffset.value, [-HEADER_HEIGHT, 0, HEADER_HEIGHT], [2, 1, 1]),
+          scale: interpolate(scrollOffset.value, [-headerHeight, 0, headerHeight], [2, 1, 1]),
         },
       ],
     };
@@ -51,23 +53,25 @@ export default function ParallaxScrollView({
       scrollEventThrottle={16}>
       <Animated.View
         style={[
-          styles.header,
+          createStyles(headerHeight, headerWidth, headerWidth).header,
           { backgroundColor: headerBackgroundColor[colorScheme] },
           headerAnimatedStyle,
         ]}>
         {headerImage}
       </Animated.View>
-      <ThemedView style={styles.content}>{children}</ThemedView>
+      <ThemedView style={createStyles(headerHeight,headerWidth).content}>{children}</ThemedView>
     </Animated.ScrollView>
   );
 }
 
-const styles = StyleSheet.create({
+const createStyles = (HEADER_HEIGHT,HEADER_WIDTH ) =>
+StyleSheet.create({
   container: {
     flex: 1,
   },
   header: {
     height: HEADER_HEIGHT,
+    width: HEADER_WIDTH,
     overflow: 'hidden',
   },
   content: {

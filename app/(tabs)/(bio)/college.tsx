@@ -1,0 +1,139 @@
+import { Image } from 'expo-image';
+import { Platform, StyleSheet } from 'react-native';
+
+import { Collapsible } from '@/components/ui/collapsible';
+import { ExternalLink } from '@/components/external-link';
+import ParallaxScrollView from '@/components/parallax-scroll-view';
+import { ThemedText } from '@/components/themed-text';
+import { ThemedView } from '@/components/themed-view';
+import { IconSymbol } from '@/components/ui/icon-symbol';
+import { Fonts } from '@/constants/theme';
+import { BulletItem } from '@/components/bulleting';
+
+export default function TabTwoScreen() {
+  return (
+    <ParallaxScrollView
+      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerImage={
+        <IconSymbol
+          size={100}
+          color="#808080"
+          name="chevron.left.forwardslash.chevron.right"
+          style={styles.headerImage}
+        />
+      }>
+      <ThemedView style={styles.titleContainer}>
+        <ThemedText
+          type="title"
+          style={{
+            fontFamily: Fonts.rounded,
+          }}>
+          College Years
+        </ThemedText>
+      </ThemedView>
+    <Collapsible title="Hamilton">
+        <ThemedText type="defaultSemiBold" style={{textDecorationLine: 'underline', fontStyle: 'italic'}}>
+		Memorable Classes and Teachers </ThemedText>
+ 	<BulletItem>Psychology</BulletItem>
+	<BulletItem>Religious Studies</BulletItem>
+        <ThemedText>Red haired Professor
+	</ThemedText>
+        <ThemedText>
+	</ThemedText>
+ 	<BulletItem>Ancient Civilizations</BulletItem>
+        <ThemedText>
+	</ThemedText>
+      </Collapsible>
+      <Collapsible title="After School Activities">
+	<BulletItem>Practical Jokes</BulletItem>
+        <ThemedText>Exlaxed brownies, fire drills
+	</ThemedText>
+	<BulletItem>Football Games</BulletItem>
+        <ThemedText>Spiked hot chocolate, rooting for the clean shirts
+	</ThemedText>
+	<BulletItem>Chatting in Burke Library</BulletItem>
+	<BulletItem>Griffin Road Parties</BulletItem>
+        <ThemedText>Dancing and singing
+	</ThemedText>
+	<BulletItem>Quad Dorm Parties</BulletItem>
+        <ThemedText>Circling the keg, stoking the fire, smokin' and joking
+	</ThemedText>
+ 	<BulletItem>Watching Soap Operas</BulletItem>
+ 	<BulletItem>Sangertown Mall</BulletItem>
+ 	<BulletItem>George Thorogood Concert</BulletItem>
+      </Collapsible>
+      <Collapsible title="Best Friends">
+	<BulletItem>Dawn</BulletItem>
+	<BulletItem>Nanci</BulletItem>
+	<BulletItem>Denise</BulletItem>
+	<BulletItem>Julie</BulletItem>
+	<BulletItem>Katie</BulletItem>
+	<BulletItem>Cathy</BulletItem>
+	<BulletItem>Laura</BulletItem>
+	<BulletItem>Jean</BulletItem>
+	<BulletItem>Parker</BulletItem>
+	<BulletItem>Clayton</BulletItem>
+	<BulletItem>Jason</BulletItem>
+      </Collapsible>
+      <Collapsible title="Boyfriends">
+        <ThemedText>
+		Kevin
+	</ThemedText>
+        <ThemedText>
+		John 
+	</ThemedText>
+        <ThemedText>
+		Billy
+	</ThemedText>
+        <ThemedText>
+		Steve
+	</ThemedText>
+        <ThemedText>
+		Jon
+	</ThemedText>
+      </Collapsible>
+      <Collapsible title="Summer Vacation">
+	<ThemedText>
+	</ThemedText>
+	<ThemedText type="defaultSemiBold" style={{fontSize: 24}}>Summer Jobs
+	</ThemedText>
+	<ThemedText>
+		Lab Clerk
+	</ThemedText>
+	<ThemedText>
+	</ThemedText>
+	<ThemedText type="defaultSemiBold" style={{fontSize: 24}}>Country Club
+	</ThemedText>
+	<ThemedText>
+		Playing tennis, Lunch on the patio overlooking the pool
+	</ThemedText>
+	<ThemedText>
+	</ThemedText>
+	<ThemedText type="defaultSemiBold" style={{fontSize: 24}}>Belmar
+	</ThemedText>
+	<ThemedText>
+		Cruising in "Little Red Prelude"
+	</ThemedText>
+      </Collapsible>
+      <Collapsible title="Memorable Quotes">
+        <ThemedText>
+		“I like to be called Shmellen”
+	</ThemedText>
+       </Collapsible>
+    </ParallaxScrollView>
+  );
+}
+
+const styles = StyleSheet.create({
+  headerImage: {
+    color: '#808080',
+    top:0,
+    bottom: 0,
+    left: -5,
+    position: 'absolute',
+  },
+  titleContainer: {
+    flexDirection: 'row',
+    gap: 5,
+  },
+});
