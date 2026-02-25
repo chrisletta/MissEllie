@@ -9,6 +9,9 @@ import { ThemedView } from '@/components/themed-view';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Fonts } from '@/constants/theme';
 import { BulletItem } from '@/components/bulleting';
+import { useEffect, useState } from "react";
+import { Audio } from "expo-av";
+import { Button, View } from "react-native";
 
 export default function TabTwoScreen() {
   return (
@@ -261,9 +264,46 @@ export default function TabTwoScreen() {
         <ThemedText>
 	</ThemedText>
       </Collapsible>
+<ThemedText></ThemedText>
+<M4APlayer />
+<ThemedText></ThemedText>
+<ThemedText></ThemedText>
     </ParallaxScrollView>
   );
 }
+
+export function M4APlayer() {
+  const [sound, setSound] = useState(null);
+
+  async function play1() {
+    const { sound } = await Audio.Sound.createAsync(
+      require("@/assets/songs/dancing_queen.m4a")     );
+    setSound(sound);
+    await sound.playAsync();
+  }
+  async function play2() {
+    const { sound } = await Audio.Sound.createAsync(
+      require("@/assets/songs/night_moves.m4a")     );
+    setSound(sound);
+    await sound.playAsync();
+  }
+
+  useEffect(() => {
+    return sound
+      ? () => {
+          sound.unloadAsync();
+        }
+      : undefined;
+  }, [sound]);
+
+  return (
+    <View>
+      <Button title="Song: Dancing Queen by ABBA" onPress={play1} />
+      <Button title="Song: Night Moves by Bob Seger" onPress={play2} />
+    </View>
+  );
+}
+
 
 const styles = StyleSheet.create({
   headerImage: {

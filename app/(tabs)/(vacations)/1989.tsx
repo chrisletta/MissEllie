@@ -8,6 +8,9 @@ import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Fonts } from '@/constants/theme';
+import { useEffect, useState } from "react";
+import { Button, View } from "react-native";
+import { Audio } from "expo-av";
 
 export default function TabTwoScreen() {
   return (
@@ -29,71 +32,76 @@ export default function TabTwoScreen() {
           Puerta Plata
         </ThemedText>
       </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="Friends">
-        <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
-        </ThemedText>
-        <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
+      <Collapsible title="Activities">
+        <ThemedText>Sunbathing under a Palm Tree</ThemedText>
+        <ThemedText>Happy Hour on the Beach</ThemedText>
+        <ThemedText>Middle aged Canadian women and the cabin boys</ThemedText>
+        <ThemedText>Dancing at night in the Cabana</ThemedText>
+        <ThemedText>Power Outages... in search of a running shower</ThemedText> 
+        <ThemedText>Escorted trip into town</ThemedText>                   
+        <ThemedText></ThemedText>
       </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
+      <Collapsible title="Food and Drinks">
+        <ThemedText>All you can eat Dominican arroz con pollo</ThemedText>
+	<ThemedText>Tropicana</ThemedText>        
+      </Collapsible>
+      <Collapsible title="Souvenirs">
+        <ThemedText>African Face Masks</ThemedText>
+        <ThemedText>Straw Dolls</ThemedText>
+      </Collapsible>
+      <Collapsible title="Pics">
+        <ThemedText>"Airport"</ThemedText>
+        <ThemedText>"On the bridge"</ThemedText>
+      </Collapsible>
+      <Collapsible title="Memorable Lines">
         <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
+	"Happy Hour Twofers"
         </ThemedText>
       </Collapsible>
-      <Collapsible title="Images">
-        <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
-        </ThemedText>
-        <Image
-          source={require('@/assets/images/react-logo.png')}
-          style={{ width: 100, height: 100, alignSelf: 'center' }}
-        />
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Light and dark mode components">
-        <ThemedText>
-          This template has light and dark mode support. The{' '}
-          <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
-          what the user&apos;s current color scheme is, and so you can adjust UI colors accordingly.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Animations">
-        <ThemedText>
-          This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
-          the powerful{' '}
-          <ThemedText type="defaultSemiBold" style={{ fontFamily: Fonts.mono }}>
-            react-native-reanimated
-          </ThemedText>{' '}
-          library to create a waving hand animation.
-        </ThemedText>
-        {Platform.select({
-          ios: (
-            <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
-              component provides a parallax effect for the header image.
-            </ThemedText>
-          ),
-        })}
-      </Collapsible>
+<ThemedText></ThemedText>
+<M4APlayer />
+<ThemedText></ThemedText>
+<ThemedText></ThemedText>
     </ParallaxScrollView>
+  );
+}
+
+export function M4APlayer() {
+  const [sound, setSound] = useState(null);
+
+  async function play1() {
+    const { sound } = await Audio.Sound.createAsync(
+      require("@/assets/songs/one_two_three.m4a")     );
+    setSound(sound);
+    await sound.playAsync();
+  }
+  async function play2() {
+    const { sound } = await Audio.Sound.createAsync(
+      require("@/assets/songs/conga.m4a")     );
+    setSound(sound);
+    await sound.playAsync();
+  }
+  async function play3() {
+    const { sound } = await Audio.Sound.createAsync(
+      require("@/assets/songs/two_tickets_to_paradise.mp3")     );
+    setSound(sound);
+    await sound.playAsync();
+  }
+
+  useEffect(() => {
+    return sound
+      ? () => {
+          sound.unloadAsync();
+        }
+      : undefined;
+  }, [sound]);
+
+  return (
+    <View>
+      <Button title="Song: Two Tickets to Paradise by Eddie Money" onPress={play3} />
+      <Button title="Song: 1-2-3 by Gloria Estefan" onPress={play1} />
+      <Button title="Song: Conga by Gloria Estefan" onPress={play2} />
+    </View>
   );
 }
 

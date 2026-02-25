@@ -8,7 +8,8 @@ import { ThemedView } from '@/components/themed-view';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Fonts } from '@/constants/theme';
 import { router } from "expo-router";
-
+import { useEffect, useState } from "react";
+import { Audio } from "expo-av";
 
 export default function TabTwoScreen() {
   return (
@@ -87,6 +88,10 @@ export default function TabTwoScreen() {
 			perhaps a "Spring Fling"
         </ThemedText>
             </Collapsible>
+<ThemedText></ThemedText>
+<M4APlayer />
+<ThemedText></ThemedText>
+<ThemedText></ThemedText>
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Button
         title="Engagement"
@@ -97,6 +102,30 @@ export default function TabTwoScreen() {
   );
 }
 
+export function M4APlayer() {
+  const [sound, setSound] = useState(null);
+
+  async function play1() {
+    const { sound } = await Audio.Sound.createAsync(
+      require("@/assets/songs/dont_know_much.m4a")     );
+    setSound(sound);
+    await sound.playAsync();
+  }
+
+  useEffect(() => {
+    return sound
+      ? () => {
+          sound.unloadAsync();
+        }
+      : undefined;
+  }, [sound]);
+
+  return (
+    <View>
+      <Button title="Song: Don't Know Much by Linda Ronstadt & Aaron Neville" onPress={play1} />
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   headerImage: {

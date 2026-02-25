@@ -13,13 +13,12 @@ export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerHeight={300}
       headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
-        />
+      <Image
+          source={require('@/assets/images/ToughStatenIslandGirl.png')}
+          style={styles.reactLogo}
+       />
       }>
       <ThemedView style={styles.titleContainer}>
         <ThemedText
@@ -27,7 +26,7 @@ export default function TabTwoScreen() {
           style={{
             fontFamily: Fonts.rounded,
           }}>
-          Explore
+          Childhood
         </ThemedText>
       </ThemedView>
       <ThemedText>This app includes example code to help you get started.</ThemedText>
@@ -108,5 +107,14 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+  },
+  reactLogo: {
+    height: 300,
+    width: 240,
+    top: 0,
+    left: 70,
+    marginTop: 10,
+    marginBottom: 10,
+    position: 'absolute',
   },
 });

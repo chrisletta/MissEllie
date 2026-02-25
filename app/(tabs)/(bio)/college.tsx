@@ -9,17 +9,19 @@ import { ThemedView } from '@/components/themed-view';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Fonts } from '@/constants/theme';
 import { BulletItem } from '@/components/bulleting';
+import { useEffect, useState } from "react";
+import { Audio } from "expo-av";
+import { Button, View } from "react-native";
 
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerHeight={300}
       headerImage={
-        <IconSymbol
-          size={100}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
+        <Image
+          source={require('@/assets/images/HamGraduationFam.png')}
+          style={styles.reactLogo}
         />
       }>
       <ThemedView style={styles.titleContainer}>
@@ -74,6 +76,12 @@ export default function TabTwoScreen() {
 	<BulletItem>Parker</BulletItem>
 	<BulletItem>Clayton</BulletItem>
 	<BulletItem>Jason</BulletItem>
+      headerImage={
+        <Image
+          source={require('@/assets/images/ThirstyGirls.png')}
+          style={styles.reactLogo}
+        />
+      }>
       </Collapsible>
       <Collapsible title="Boyfriends">
         <ThemedText>
@@ -120,9 +128,52 @@ export default function TabTwoScreen() {
 		“I like to be called Shmellen”
 	</ThemedText>
        </Collapsible>
+
+<M4APlayer />
+<ThemedText></ThemedText>
+<ThemedText></ThemedText>
     </ParallaxScrollView>
   );
 }
+
+export function M4APlayer() {
+  const [sound, setSound] = useState(null);
+
+  async function play1() {
+    const { sound } = await Audio.Sound.createAsync(
+      require("@/assets/songs/everybody_wants_to_rule_the_world.m4a")     );
+    setSound(sound);
+    await sound.playAsync();
+  }
+  async function play2() {
+    const { sound } = await Audio.Sound.createAsync(
+      require("@/assets/songs/dust_in_the_wind.m4a")     );
+    setSound(sound);
+    await sound.playAsync();
+  }
+  async function play3() {
+    const { sound } = await Audio.Sound.createAsync(
+      require("@/assets/songs/dust_in_the_wind.m4a")     );
+    setSound(sound);
+    await sound.playAsync();
+  }
+
+  useEffect(() => {
+    return sound
+      ? () => {
+          sound.unloadAsync();
+        }
+      : undefined;
+  }, [sound]);
+
+  return (
+    <View>
+      <Button title="Song: Everybody Wants to Rule the World" onPress={play1} />
+      <Button title="Song: Dust in the Wind by Kansas" onPress={play2} />
+    </View>
+  );
+}
+
 
 const styles = StyleSheet.create({
   headerImage: {
@@ -135,5 +186,15 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     gap: 5,
+  },
+  reactLogo: {
+    height: 300,
+    width: 400,
+    top: 0,
+    bottom: 20,
+    left: 0,
+    marginTop: 0,
+    marginBottom: 0,
+    position: 'absolute',
   },
 });

@@ -9,6 +9,10 @@ import { ThemedView } from '@/components/themed-view';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Fonts } from '@/constants/theme';
 
+import { useEffect, useState } from "react";
+import { Button, View } from "react-native";
+import { Audio } from "expo-av";
+
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
@@ -95,13 +99,46 @@ export default function TabTwoScreen() {
 <ThemedText>For love’s mark is on the heart</ThemedText>
 <ThemedText>And lasts much longer than a scar.</ThemedText>
 <ThemedText></ThemedText>
-<ThemedText style={{ fontStyle: 'italic' }}>Song: "Goodbye Girl" by Squeeze</ThemedText>
-<ThemedText style={{ fontStyle: 'italic' }}>Song: "I Saw Her Standing There" by Lennon and McCartney</ThemedText>
+<M4APlayer />
 <ThemedText></ThemedText>
 <ThemedText></ThemedText>
          </ParallaxScrollView>
   );
 }
+export function M4APlayer() {
+  const [sound, setSound] = useState(null);
+
+  async function play1() {
+    const { sound } = await Audio.Sound.createAsync(
+      require("@/assets/songs/goodbye_girl.m4a")     );
+    setSound(sound);
+    await sound.playAsync();
+  }
+  async function play2() {
+    const { sound } = await Audio.Sound.createAsync(
+      require("@/assets/songs/i_saw_her_standing_there.m4a")     );
+    setSound(sound);
+    await sound.playAsync();
+  }
+
+  useEffect(() => {
+    return sound
+      ? () => {
+          sound.unloadAsync();
+        }
+      : undefined;
+  }, [sound]);
+
+  return (
+    <View>
+      <Button title="Song: Goodbye Girl by Squeeze" onPress={play1} />
+      <Button title="Song: I Saw Her Standing There by the Beatles" onPress={play2} />
+    </View>
+  );
+}
+
+
+
 
 const styles = StyleSheet.create({
   headerImage: {

@@ -78,7 +78,13 @@ export default function TabTwoScreen() {
         </ThemedText>
         <ThemedText>
           Hired: August 11 2001
+	</ThemedText>
+	<ThemedText>
+	  Promotion: April 26 2006
         </ThemedText>
+<ThemedText></ThemedText>
+<ThemedText></ThemedText>
+<ThemedText></ThemedText>
       </Collapsible>
     </ParallaxScrollView>
   );

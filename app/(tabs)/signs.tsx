@@ -27,72 +27,95 @@ export default function TabTwoScreen() {
           style={{
             fontFamily: Fonts.rounded,
           }}>
-          Explore
+          Signs
         </ThemedText>
       </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
+      <Collapsible title="History That Rhymes">
         <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
+          Hair assembly line - left shoulder
+
+ surgery , before brain surgery 
+
+Under affectionate mother - overflowing love and indulgence 
+
+Rain Man - son on the spectrum
+
+Society for Seaman’s Children - Sofia
+
+Riis Park picnic - pig roast
+
+Prom Date - Chris
+
+Floating in Saint John - pool floats
+
+Aunt Gene vacations - snacks and treats, chocolate fountains, cookie cakes, movie candy
+
+Four star restaurants - holiday dinners
+
+Thirsty Girl - signature cocktails 
+
+Saint John Flora - Deck Habiscus
+
+Cherry Tree - Sal
+
+Fear of brain tumor- PLL
+
+Endometriosis - PLL
+
+Pool Light - PLL
+
+Covid - PLL
+
+Boots - Terry, Reggie, Sparkles, Charlie, and Puffin
+
+Tennis - Jerry banishment
+
+Prelude - Mazda
+
+Hamster - Larry
+
+
+
+Jack La Lane - abs of steel, barry, stairmaster, nordic track, treadmill, peloton racketball, headquarters plaza, kara, nick, ieva, corrine’s mom, planet fitness , walking butterworth with katie, mary anne, joanna, kristen, liz, alice
+
+
+
+Floating vs steering/controlling -whitewater rafting, getting stuck on a rock…floating in the pool, getting sunburned snorkeling, snorkeling in aruba, lagging behind us
+
+
+
+All who have nothing let them come to the water
+
+All who have nothing let them come to the lord
+
+Without money without price how can you spend your life
+
+Except for the a Lord
+
+
+
+Bank teller - credit card bills 
+
+
+
+Tennis- winners no volleys
+
+
+
+Singing Santa Lucia to Gina -Ben
+
+
+
+Shopping with Zia
+
+
+
+Artful Dodger
+
+
+
+Gift shops
         </ThemedText>
-        <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
-        <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
-        </ThemedText>
-      </Collapsible>
-      <Collapsible title="Images">
-        <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
-        </ThemedText>
-        <Image
-          source={require('@/assets/images/react-logo.png')}
-          style={{ width: 100, height: 100, alignSelf: 'center' }}
-        />
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Light and dark mode components">
-        <ThemedText>
-          This template has light and dark mode support. The{' '}
-          <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
-          what the user&apos;s current color scheme is, and so you can adjust UI colors accordingly.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Animations">
-        <ThemedText>
-          This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
-          the powerful{' '}
-          <ThemedText type="defaultSemiBold" style={{ fontFamily: Fonts.mono }}>
-            react-native-reanimated
-          </ThemedText>{' '}
-          library to create a waving hand animation.
-        </ThemedText>
-        {Platform.select({
-          ios: (
-            <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
-              component provides a parallax effect for the header image.
-            </ThemedText>
-          ),
-        })}
       </Collapsible>
     </ParallaxScrollView>
   );

@@ -13,12 +13,11 @@ export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+    headerHeight={300}
       headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
+        <Image
+          source={require('@/assets/images/2006_11_Chef.png')}
+          style={styles.reactLogo}
         />
       }>
       <ThemedView style={styles.titleContainer}>
@@ -47,6 +46,15 @@ export default function TabTwoScreen() {
       <Collapsible title="Dietitian and Snack Lady">
         <ThemedText>What is healthier a celery stick or an M&M cookie?</ThemedText>
       </Collapsible>
+      <Collapsible title="Signature Cocktails">
+        <ThemedText>Thirsty girl training...</ThemedText>
+      </Collapsible>
+      <Collapsible title="Bon Appetit Magazines">
+        <ThemedText>Holiday Recipes</ThemedText>
+      </Collapsible>
+      <Collapsible title="Uncle Guiseppes">
+        <ThemedText>Well deserved vacation</ThemedText>
+      </Collapsible>
     </ParallaxScrollView>
   );
 }
@@ -61,5 +69,14 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+  },
+reactLogo: {
+    height: 300,
+    width: 400,
+    top: 0,
+    left: 0,
+    marginTop: 0,
+    marginBottom: 0,
+    position: 'absolute',
   },
 });
