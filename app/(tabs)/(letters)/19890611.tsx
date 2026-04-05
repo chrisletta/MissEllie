@@ -17,10 +17,10 @@ export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerHeight={300}
+      headerHeight={460}
       headerImage={
       <Image
-          source={require('@/assets/images/Love.png')}
+          source={require('@/assets/images/MEnB_Jul89_1.jpg')}
           style={styles.reactLogo}
        />
       }>
@@ -107,7 +107,7 @@ export function M4APlayer() {
 
   async function play1() {
     const { sound } = await Audio.Sound.createAsync(
-      require("@/assets/songs/think_im_in_love.mp3")     );
+      require("@/assets/songs/think_im_in_love.aac")     );
     setSound(sound);
     await sound.playAsync();
   }
@@ -142,11 +142,11 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   reactLogo: {
-    height: 300,
-    width: 240,
+    height: 480,
+    width: 390,
     top: 0,
-    left: 70,
-    marginTop: 10,
+    left: 0,
+    marginTop: 0,
     marginBottom: 10,
     position: 'absolute',
   },

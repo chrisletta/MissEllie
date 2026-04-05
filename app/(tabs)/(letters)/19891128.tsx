@@ -20,7 +20,7 @@ export default function TabTwoScreen() {
       headerHeight={400}
       headerImage={
       <Image
-          source={require('@/assets/images/AnimalHats.png')}
+          source={require('@/assets/images/198911_watching_tv.jpeg')}
           style={styles.reactLogo}
        />
       }>
@@ -94,10 +94,10 @@ const styles = StyleSheet.create({
   },
   reactLogo: {
     height: 400,
-    width: 240,
+    width: 400,
     top: 0,
-    left: 70,
-    marginTop: 10,
+    left: 0,
+    marginTop: 0,
     marginBottom: 10,
     position: 'absolute',
   },

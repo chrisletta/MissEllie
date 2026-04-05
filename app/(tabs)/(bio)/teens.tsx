@@ -19,7 +19,7 @@ export default function TabTwoScreen() {
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
       headerImage={
         <Image
-          source={require('@/assets/images/DancingQueen.png')}
+          source={require('@/assets/images/DancingQueen.jpg')}
           style={styles.reactLogo}
         />
       }>
@@ -64,7 +64,7 @@ export default function TabTwoScreen() {
  	<BulletItem>Track</BulletItem>
  	<BulletItem>Outward Bound</BulletItem>
         <Image
-          source={require('@/assets/images/1984_HonorSociety.png')}
+          source={require('@/assets/images/1984_HonorSociety.jpg')}
           style={styles.reactLogo2}
         />
   <ThemedText></ThemedText>
@@ -94,7 +94,7 @@ export default function TabTwoScreen() {
   <ThemedText></ThemedText>
   <ThemedText></ThemedText>
         <Image
-          source={require('@/assets/images/1982_NotreDame.png')}
+          source={require('@/assets/images/1982_NotreDame.jpg')}
           style={styles.reactLogo2}
         />
   <ThemedText></ThemedText>

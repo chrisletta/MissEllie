@@ -16,7 +16,7 @@ export default function TabTwoScreen() {
       headerHeight={300}
       headerImage={
        <Image
-          source={require('@/assets/images/1990VirginiaBeach.png')}
+          source={require('@/assets/images/1990VirginiaBeach.jpg')}
           style={styles.reactLogo}
         />
       }>

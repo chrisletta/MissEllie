@@ -20,7 +20,7 @@ export default function TabTwoScreen() {
       headerHeight={470}
       headerImage={
       <Image
-          source={require('@/assets/images/be_mine.png')}
+          source={require('@/assets/images/be_mine.jpg')}
           style={styles.reactLogo}
        />
       }>
@@ -54,7 +54,7 @@ export function M4APlayer() {
 
   async function play1() {
     const { sound } = await Audio.Sound.createAsync(
-      require("@/assets/songs/up_where_we_belong.mp3")     );
+      require("@/assets/songs/up_where_we_belong.aac")     );
     setSound(sound);
     await sound.playAsync();
   }

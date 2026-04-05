@@ -19,7 +19,7 @@ export default function TabTwoScreen() {
       headerHeight={300}
       headerImage={
        <Image
-          source={require('@/assets/images/1989PuertaPlata.png')}
+          source={require('@/assets/images/1989PuertaPlata.jpg')}
           style={styles.reactLogo}
         />
       }>
@@ -83,7 +83,7 @@ export function M4APlayer() {
   }
   async function play3() {
     const { sound } = await Audio.Sound.createAsync(
-      require("@/assets/songs/two_tickets_to_paradise.mp3")     );
+      require("@/assets/songs/two_tickets_to_paradise.aac")     );
     setSound(sound);
     await sound.playAsync();
   }

@@ -17,7 +17,7 @@ export default function TabTwoScreen() {
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
       headerImage={
         <Image
-          source={require('@/assets/images/Baby.png')}
+          source={require('@/assets/images/Baby.jpg')}
           style={styles.reactLogo}
         />
       }>

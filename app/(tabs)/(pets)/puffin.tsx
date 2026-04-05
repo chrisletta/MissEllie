@@ -13,12 +13,11 @@ export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerHeight={600}
       headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
+       <Image
+          source={require('@/assets/images/puffin.jpg')}
+          style={styles.reactLogo}
         />
       }>
       <ThemedView style={styles.titleContainer}>
@@ -27,7 +26,7 @@ export default function TabTwoScreen() {
           style={{
             fontFamily: Fonts.rounded,
           }}>
-          Explore
+          Puffin
         </ThemedText>
       </ThemedView>
       <ThemedText>Family.</ThemedText>
@@ -108,5 +107,14 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+  },
+  reactLogo: {
+    height: 600,
+    width: 300,
+    top: 0,
+    left: 50,
+    marginTop: 0,
+    marginBottom: 10,
+    position: 'absolute',
   },
 });

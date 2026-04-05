@@ -17,10 +17,10 @@ export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerHeight={300}
+      headerHeight={400}
       headerImage={
       <Image
-          source={require('@/assets/images/pda.png')}
+          source={require('@/assets/images/lovers_in_paradise.jpg')}
           style={styles.reactLogo}
        />
       }>
@@ -108,7 +108,7 @@ export default function TabTwoScreen() {
 <ThemedText>With Love forever</ThemedText>
 <ThemedText>Ellen</ThemedText>
 
-<M4APlayer />
+<AACPlayer />
 <ThemedText></ThemedText>
 <ThemedText></ThemedText>
    </ParallaxScrollView>
@@ -117,12 +117,12 @@ export default function TabTwoScreen() {
 
 
 
-export function M4APlayer() {
+export function AACPlayer() {
   const [sound, setSound] = useState(null);
 
   async function play1() {
     const { sound } = await Audio.Sound.createAsync(
-      require("@/assets/songs/cant_help_falling_in_love.mp3")     );
+      require("@/assets/songs/cant_help_falling_in_love.aac")     );
     setSound(sound);
     await sound.playAsync();
   }
@@ -154,11 +154,11 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   reactLogo: {
-    height: 300,
-    width: 240,
+    height: 400,
+    width: 400,
     top: 0,
-    left: 70,
-    marginTop: 10,
+    left: 0,
+    marginTop: 0,
     marginBottom: 10,
     position: 'absolute',
   },

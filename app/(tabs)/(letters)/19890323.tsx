@@ -20,7 +20,7 @@ export default function TabTwoScreen() {
       headerHeight={470}
       headerImage={
       <Image
-          source={require('@/assets/images/job_as_speed_bump.png')}
+          source={require('@/assets/images/job_as_speed_bump.jpg')}
           style={styles.reactLogo}
        />
       }>

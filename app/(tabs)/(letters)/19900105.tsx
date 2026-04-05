@@ -20,7 +20,7 @@ export default function TabTwoScreen() {
       headerHeight={300}
       headerImage={
       <Image
-          source={require('@/assets/images/Love.png')}
+          source={require('@/assets/images/ellen_vacation.jpg')}
           style={styles.reactLogo}
        />
       }>
@@ -56,7 +56,7 @@ export function M4APlayer() {
 
   async function play1() {
     const { sound } = await Audio.Sound.createAsync(
-      require("@/assets/songs/the_rose.mp3")     );
+      require("@/assets/songs/the_rose.aac")     );
     setSound(sound);
     await sound.playAsync();
   }
@@ -90,9 +90,9 @@ const styles = StyleSheet.create({
   },
   reactLogo: {
     height: 300,
-    width: 240,
+    width: 400,
     top: 0,
-    left: 70,
+    left: 0,
     marginTop: 0,
     marginBottom: 10,
     position: 'absolute',

@@ -12,6 +12,8 @@ import { Fonts } from '@/constants/theme';
 import { useEffect, useState } from "react";
 import { Button, View } from "react-native";
 import { Audio } from "expo-av";
+import { Stack } from "expo-router";
+
 
 export default function TabTwoScreen() {
   return (
@@ -20,7 +22,7 @@ export default function TabTwoScreen() {
       headerHeight={470}
       headerImage={
       <Image
-          source={require('@/assets/images/pure_and_innocent.png')}
+          source={require('@/assets/images/pure_and_innocent.jpg')}
           style={styles.reactLogo}
        />
       }>
@@ -58,7 +60,7 @@ export function M4APlayer() {
 
   async function play1() {
     const { sound } = await Audio.Sound.createAsync(
-      require("@/assets/songs/i_do_it_for_you.mp3")     );
+      require("@/assets/songs/i_do_it_for_you.aac")     );
     setSound(sound);
     await sound.playAsync();
   }

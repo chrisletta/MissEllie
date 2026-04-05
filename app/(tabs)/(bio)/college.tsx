@@ -20,7 +20,7 @@ export default function TabTwoScreen() {
       headerHeight={300}
       headerImage={
         <Image
-          source={require('@/assets/images/HamGraduationFam.png')}
+          source={require('@/assets/images/HamGraduationFam.jpg')}
           style={styles.reactLogo}
         />
       }>
@@ -78,7 +78,7 @@ export default function TabTwoScreen() {
 	<BulletItem>Jason</BulletItem>
       headerImage={
         <Image
-          source={require('@/assets/images/ThirstyGirls.png')}
+          source={require('@/assets/images/ThirstyGirls.jpg')}
           style={styles.reactLogo}
         />
       }>

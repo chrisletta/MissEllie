@@ -7,7 +7,7 @@ export default function BioScreen() {
   return (
     <View>
       <Image
-          source={require('@/assets/images/BayvilleCouch.png')}
+          source={require('@/assets/images/BayvilleCouch.jpg')}
           style={styles.reactLogo}
        />
       <Text>Biography... </Text>

@@ -20,7 +20,7 @@ export default function TabTwoScreen() {
       headerHeight={400}
       headerImage={
       <Image
-          source={require('@/assets/images/cupidpms.png')}
+          source={require('@/assets/images/cupidpms.jpg')}
           style={styles.reactLogo}
        />
       }>
@@ -57,7 +57,7 @@ export function M4APlayer() {
 
   async function play1() {
     const { sound } = await Audio.Sound.createAsync(
-      require("@/assets/songs/only_you.mp3")     );
+      require("@/assets/songs/only_you.aac")     );
     setSound(sound);
     await sound.playAsync();
   }

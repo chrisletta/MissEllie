@@ -27,72 +27,58 @@ export default function TabTwoScreen() {
           style={{
             fontFamily: Fonts.rounded,
           }}>
-          Explore
+          Parties
         </ThemedText>
       </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
+      <Collapsible title="Halloween">
         <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
-        </ThemedText>
-        <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
-        <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
+	At Nancy's. At 102-35 67 Road. At Noreen's.Kids.
         </ThemedText>
       </Collapsible>
-      <Collapsible title="Images">
+      <Collapsible title="Around the World">
         <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
+	At 102-35 67 Road.
         </ThemedText>
-        <Image
-          source={require('@/assets/images/react-logo.png')}
-          style={{ width: 100, height: 100, alignSelf: 'center' }}
-        />
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
       </Collapsible>
-      <Collapsible title="Light and dark mode components">
+      <Collapsible title="Barbecues and Pig Roasts">
         <ThemedText>
-          This template has light and dark mode support. The{' '}
-          <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
-          what the user&apos;s current color scheme is, and so you can adjust UI colors accordingly.
+	At 5 Corn Hill
         </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
       </Collapsible>
-      <Collapsible title="Animations">
+      <Collapsible title="New Year's Eve">
         <ThemedText>
-          This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
-          the powerful{' '}
-          <ThemedText type="defaultSemiBold" style={{ fontFamily: Fonts.mono }}>
-            react-native-reanimated
-          </ThemedText>{' '}
-          library to create a waving hand animation.
+	Squab dinner
         </ThemedText>
-        {Platform.select({
-          ios: (
-            <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
-              component provides a parallax effect for the header image.
-            </ThemedText>
-          ),
-        })}
+      </Collapsible>
+      <Collapsible title="40th Anniversary">
+        <ThemedText>
+	At 5 Corn Hill
+        </ThemedText>
+      </Collapsible>
+      <Collapsible title="Surprise 40th and 46th">
+        <ThemedText>
+	At 5 Corn Hill
+        </ThemedText>
+      </Collapsible>
+      <Collapsible title="Candle Auction">
+        <ThemedText>
+	At 5 Corn Hill
+        </ThemedText>
+      </Collapsible>
+      <Collapsible title="Gold Auction">
+        <ThemedText>
+	At 5 Corn Hill
+        </ThemedText>
+      </Collapsible>
+      <Collapsible title="Newlywed">
+        <ThemedText>
+	At 5 Corn Hill
+        </ThemedText>
+      </Collapsible>
+      <Collapsible title="Festivus">
+        <ThemedText>
+	At 5 Corn Hill
+        </ThemedText>
       </Collapsible>
     </ParallaxScrollView>
   );

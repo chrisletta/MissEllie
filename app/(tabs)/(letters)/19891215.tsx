@@ -20,7 +20,7 @@ export default function TabTwoScreen() {
       headerHeight={300}
       headerImage={
       <Image
-          source={require('@/assets/images/pda.png')}
+          source={require('@/assets/images/1989PuertaPlata.jpg')}
           style={styles.reactLogo}
        />
       }>
@@ -116,9 +116,9 @@ const styles = StyleSheet.create({
   },
   reactLogo: {
     height: 300,
-    width: 240,
+    width: 400,
     top: 0,
-    left: 70,
+    left: 0,
     marginTop: 0,
     marginBottom: 10,
     position: 'absolute',

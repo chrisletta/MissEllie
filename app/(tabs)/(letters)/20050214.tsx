@@ -20,7 +20,7 @@ export default function TabTwoScreen() {
       headerHeight={470}
       headerImage={
       <Image
-          source={require('@/assets/images/elliefants.png')}
+          source={require('@/assets/images/elliefants.jpg')}
           style={styles.reactLogo}
        />
       }>
@@ -81,7 +81,7 @@ export function M4APlayer() {
 
   async function play1() {
     const { sound } = await Audio.Sound.createAsync(
-      require("@/assets/songs/i_just_fall_in_love_again.mp3")     );
+      require("@/assets/songs/i_just_fall_in_love_again.aac")     );
     setSound(sound);
     await sound.playAsync();
   }

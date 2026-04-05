@@ -20,7 +20,7 @@ export default function TabTwoScreen() {
       headerHeight={300}
       headerImage={
       <Image
-          source={require('@/assets/images/Love.png')}
+          source={require('@/assets/images/Love.jpg')}
           style={styles.reactLogo}
        />
       }>
@@ -51,7 +51,7 @@ export function M4APlayer() {
 
   async function play1() {
     const { sound } = await Audio.Sound.createAsync(
-      require("@/assets/songs/groovy_kind_of_love.mp3")     );
+      require("@/assets/songs/groovy_kind_of_love.aac")     );
     setSound(sound);
     await sound.playAsync();
   }

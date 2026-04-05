@@ -20,7 +20,7 @@ export default function TabTwoScreen() {
       headerHeight={300}
       headerImage={
       <Image
-          source={require('@/assets/images/kinda_horny.png')}
+          source={require('@/assets/images/kinda_horny.jpg')}
           style={styles.reactLogo}
        />
       }>

@@ -14,7 +14,7 @@ export default function VacationsScreen() {
       headerHeight={300}
       headerImage={
        <Image
-          source={require('@/assets/images/1989PuertaPlata.png')}
+          source={require('@/assets/images/1989PuertaPlata.jpg')}
           style={styles.reactLogo}
         />
       }>

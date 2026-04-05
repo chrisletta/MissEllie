@@ -20,7 +20,7 @@ export default function TabTwoScreen() {
       headerHeight={300}
       headerImage={
       <Image
-          source={require('@/assets/images/pda.png')}
+          source={require('@/assets/images/pda.jpg')}
           style={styles.reactLogo}
        />
       }>
@@ -72,7 +72,7 @@ export function M4APlayer() {
 
   async function play1() {
     const { sound } = await Audio.Sound.createAsync(
-      require("@/assets/songs/wild_thing.mp3")     );
+      require("@/assets/songs/wild_thing.aac")     );
     setSound(sound);
     await sound.playAsync();
   }

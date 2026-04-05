@@ -15,7 +15,7 @@ export default function TabTwoScreen() {
       headerHeight={300}
       headerImage={
       <Image
-          source={require('@/assets/images/Love.png')}
+          source={require('@/assets/images/Love.jpg')}
           style={styles.reactLogo}
        />
       }>
@@ -140,8 +140,53 @@ export default function TabTwoScreen() {
       <Link href="19900214" asChild>
         <Button title="19900214-E Two Palm Trees" />
       </Link>
+      <Link href="19900214-C" asChild>
+        <Button title="19900214-C Sweet Patooty" />
+      </Link>
       <Link href="19900301" asChild>
         <Button title="19900301-E New York Fairy Tale" />
+      </Link>
+      <Link href="19900305" asChild>
+        <Button title="19900305-E Breathless" />
+      </Link>
+      <Link href="19900314" asChild>
+        <Button title="19900314-E Do You Even Care About Me???***" />
+      </Link>
+      <Link href="19900316" asChild>
+        <Button title="19900316-E Birthday Kiss" />
+      </Link>
+      <Link href="19900317" asChild>
+        <Button title="19900317-E Who Loves Yah Babe?" />
+      </Link>
+      <Link href="19900408" asChild>
+        <Button title="19900408-E Living Bra Suicide" />
+      </Link>
+      <Link href="19900410" asChild>
+        <Button title="19900410-C Outcarded by You" />
+      </Link>
+      <Link href="19900413" asChild>
+        <Button title="19900413-E I Wanna Easta Egg" />
+      </Link>
+      <Link href="19900501" asChild>
+        <Button title="19900501-E Anniversary of Our Dance" />
+      </Link>
+      <Link href="19900521" asChild>
+        <Button title="19900521-E In Heaven" />
+      </Link>
+      <Link href="19900530" asChild>
+        <Button title="19900530-E Funny Faces" />
+      </Link>
+      <Link href="19900607" asChild>
+        <Button title="19900607-C Venn Diagram of Love" />
+      </Link>
+      <Link href="19900611" asChild>
+        <Button title="19900611-E Oi Veh the Guilt" />
+      </Link>
+      <Link href="19900625" asChild>
+        <Button title="19900625-E Rich and Poor With You" />
+      </Link>
+      <Link href="19900701" asChild>
+        <Button title="19900701-E Go Ahead...Jump Me" />
       </Link>
       <Link href="19900715" asChild>
         <Button title="19900715-C Tired" />
@@ -164,8 +209,11 @@ export default function TabTwoScreen() {
       <Link href="20250101" asChild>
         <Button title="20250101-C 36 Years Ago Today" />
       </Link>
-      <Link href="20251021" asChild>
+      <Link href="./20251021" asChild>
         <Button title="20251021-C Jacob and Rachel" />
+      </Link>
+      <Link href="./20260307" asChild>
+        <Button title="20260307-C Response To Your Complaint 36 years Ago" />
       </Link>
      <Text> </Text>
      <Text> </Text>

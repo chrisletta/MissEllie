@@ -17,10 +17,10 @@ export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerHeight={300}
+      headerHeight={290}
       headerImage={
       <Image
-          source={require('@/assets/images/Love.png')}
+          source={require('@/assets/images/summer89.jpg')}
           style={styles.reactLogo}
        />
       }>
@@ -100,11 +100,11 @@ const styles = StyleSheet.create({
   },
   reactLogo: {
     height: 300,
-    width: 240,
+    width: 400,
     top: 0,
-    left: 70,
-    marginTop: 10,
-    marginBottom: 10,
+    left: 0,
+    marginTop: 0,
+    marginBottom: 0,
     position: 'absolute',
   },
 });
